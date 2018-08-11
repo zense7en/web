@@ -11,24 +11,13 @@ block main
 		.container
 			.row
 				.col
-					h2 fdfdfd
-					p kjsadkjsahd
-			.row
-				.col-sm-6.col-md-3
-					img(src='C:\Users\admin\Desktop\HocTap\FullStack\web02\src\img\home_icon_1.png')
-					h2 fdfdfd
-					p kjsadkjsahd
-				.col-sm-6.col-md-3
-					img(src='C:\Users\admin\Desktop\HocTap\FullStack\web02\src\img\home_icon_2.png')
-					h2 fdfdfd
-					p kjsadkjsahd
-				.col-sm-6.col-md-3
-					img(src='C:\Users\admin\Desktop\HocTap\FullStack\web02\src\img\home_icon_3.png')
-					h2 fdfdfd
-					p kjsadkjsahd
-				.col-sm-6.col-md-3
-					img(src='C:\Users\admin\Desktop\HocTap\FullStack\web02\src\img\home_icon_4.png')
-					h2 fdfdfd
-					p kjsadkjsahd
-
-						
+					h1 Tui Là Siêu Nhân
+					p Siêu Nhân là tui
+					.row
+						//- tao vong lap for 
+						- for(x=1;x<5;x++)
+							.col
+								img(src="./img/home_icon_"+x+".png",alt="")
+								h2 Siêu Nhân là tui
+								p Tui Là Siêu Nhân
+				
