@@ -1,0 +1,32 @@
+@import ..//_core/all
+.home_slider
+    +miXin($mautim, 200px)
+    h1
+        color: $mauxanh
+        font-variant: small-caps
+    .btn-more
+            background: $mauxanh
+            color: $maudo
+            box-shadow: 0px 5px black
+
+.home_service
+    +miXin($mausac, 250px)
+    h2
+        position: relative
+        margin-bottom: 1rem
+        &:before,
+        &:after
+            content: ""
+            display: block
+            background: black
+            left: 50%
+            transform: translateX(-50%)
+            position: absolute
+        &:before
+            width: 10%
+            height: 3px
+            bottom: -8px
+        &:after
+            width: 10px
+            height: 10px
+            bottom: -12px
