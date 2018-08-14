@@ -7,7 +7,13 @@ var babel = require('gulp-babel');
 var browserSync = require('browser-sync').create();
 var concat = require('gulp-concat');
 var sourcemaps = require('gulp-sourcemaps');
-
+// Copy Fonts
+gulp.task('copy-font', function(){
+  return gulp.src([
+    './src/fonts/**.*',
+  ])
+  .pipe(gulp.dest('.dist/fonts'))
+});
 // Copy IMG
 gulp.task('copy', function () {
   return gulp.src([
@@ -20,6 +26,7 @@ gulp.task('copy', function () {
 gulp.task('noifile-css', function () {
   return gulp.src([
       'bower_components/bootstrap/dist/css/bootstrap.min.css',
+      'bower_components\font-awesome\css\font-awesome.min.css',
     ])
     .pipe(concat('thuvien.css'))
     .pipe(gulp.dest('./dist/css'));
@@ -90,6 +97,7 @@ gulp.task('browser-sync', function () {
 gulp.task('default', function () {
   gulp.start([
     'copy',
+    'copy-font',
     'noifile-css',
     'noifile-js',
     'taocss',
